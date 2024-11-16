@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container {
+  max-width: 500px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:nth-child(1) {
+  /* background-color: #4caf50; */
+  color: #000;
+}
+
+button:nth-child(2) {
+  /* background-color: #2196f3; */
+  color: #000;
+}
+
+button:nth-child(3) {
+  background-color: #333;
+  color: #fff;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #555;
+}
+
+.logout-container {
+  text-align: center;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.logout-container button {
+  background-color: #f44336;
+  color: white;
+  width: auto;
+  padding: 10px 20px;
+}
+
+.Icon {
+  margin-left: 10px;
+  position: relative;
+  top: 2px;
+}
+
+.passwordContainer {
+  position: relative;
+  width: 100%;
+}
+
+.eyeBtn {
+  position: absolute;
+  top: -110%;
+  right: -75%;
+  /* left: 85%; */
+  /* transform: translateY(-50%); */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
