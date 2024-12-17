@@ -185,7 +185,7 @@ export const Auth = () => {
           <span className="passwordContainer">
             <input
               onChange={(e) => setPassword(e.target.value)}
-              type={isPasswordVisible ? "text" : "password"}
+              type="password"
               value={password}
               placeholder="Password"
             />
