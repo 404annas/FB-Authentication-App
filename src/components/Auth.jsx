@@ -30,6 +30,16 @@ export const Auth = () => {
 
   const githubProvider = new GithubAuthProvider();
 
+  const logoutAfterTimeout = () => {
+    setTimeout(() => {
+      const user = auth.currentUser;
+      if (user && !user.emailVerified) {
+        signOut(auth);
+        alert("Your session has expired. Please verify your email.");
+      }
+    }, 24 * 60 * 60 * 1000); // Logout after 24 hours if not verified
+  };
+
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -151,16 +161,6 @@ export const Auth = () => {
         alert("No user found with this email.");
       }
     }
-  };
-
-  const logoutAfterTimeout = () => {
-    setTimeout(() => {
-      const user = auth.currentUser;
-      if (user && !user.emailVerified) {
-        signOut(auth);
-        alert("Your session has expired. Please verify your email.");
-      }
-    }, 24 * 60 * 60 * 1000); // Logout after 24 hours if not verified
   };
 
   const togglePasswordVisibility = () => {
