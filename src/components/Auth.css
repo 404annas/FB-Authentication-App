@@ -105,3 +105,28 @@ p {
   border: none;
   cursor: pointer;
 }
+
+@media (max-width: 500px) {
+  .container {
+    width: 280px;
+    padding: 15px;
+  }
+  input {
+    margin: 10px 0;
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 12px;
+  }
+  button {
+    margin: 10px 0;
+    padding: 8px 10px;
+    width: 100%;
+    font-size: 12px;
+  }
+  .eyeBtn {
+    top: -80%;
+  }
+  p {
+    font-size: 12px;
+  }
+}
