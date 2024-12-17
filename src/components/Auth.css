@@ -95,17 +95,6 @@ p {
   width: 100%;
 }
 
-.eyeBtn {
-  position: absolute;
-  top: -110%;
-  right: -75%;
-  /* left: 85%; */
-  /* transform: translateY(-50%); */
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
 @media (max-width: 500px) {
   .container {
     width: 280px;
@@ -122,9 +111,6 @@ p {
     padding: 8px 10px;
     width: 100%;
     font-size: 12px;
-  }
-  .eyeBtn {
-    top: -80%;
   }
   p {
     font-size: 12px;

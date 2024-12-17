@@ -17,8 +17,6 @@ import "./Auth.css";
 import { FaGithub } from "react-icons/fa";
 import { IoLogOut } from "react-icons/io5";
 import { SiSimplelogin } from "react-icons/si";
-import { FaEye } from "react-icons/fa6";
-import { FaEyeSlash } from "react-icons/fa6";
 import Spin from "./Spin";
 
 export const Auth = () => {
@@ -26,7 +24,6 @@ export const Auth = () => {
   const [password, setPassword] = useState("");
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [isPasswordVisible, setIsPasswordVisible] = useState(false);
 
   const githubProvider = new GithubAuthProvider();
 
@@ -163,10 +160,6 @@ export const Auth = () => {
     }
   };
 
-  const togglePasswordVisibility = () => {
-    setIsPasswordVisible((prevState) => !prevState);
-  };
-
   return (
     <div className="container">
       {user ? (
@@ -196,11 +189,6 @@ export const Auth = () => {
               value={password}
               placeholder="Password"
             />
-            {password.length >= 4 && (
-              <button onClick={togglePasswordVisibility} className="eyeBtn">
-                {isPasswordVisible ? <FaEyeSlash /> : <FaEye />}
-              </button>
-            )}
           </span>
           <button onClick={signUp}>Sign Up</button>
           <span className="flex justify-center items-center gap-5">
